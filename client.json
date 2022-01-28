@@ -1,0 +1,10 @@
+{"web":
+    {"client_id":"85225226982-fpelt2h5q4mstt11pquhlc8je2rplfnm.apps.googleusercontent.com",
+        "project_id":"future-medley-332513","auth_uri":"https://accounts.google.com/o/oauth2/auth",
+        "token_uri":"https://oauth2.googleapis.com/token",
+        "auth_provider_x509_cert_url":"https://www.googleapis.com/oauth2/v1/certs",
+        "client_secret":"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",
+        "redirect_uris":["http://localhost:5000/api/auth/google-redirect"],
+        "javascript_origins":["http://localhost:5000"]
+        }
+    }
