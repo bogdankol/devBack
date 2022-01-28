@@ -3,7 +3,6 @@ const { Unauthorized } = require('http-errors')
 const { UserModel } = require('../db/userModel')
 
 const authenticateUser = async (req, res, next) => {
-  console.log(`+++++`, req.headers)
   try {
     if (!req.headers.authorization) throw new Unauthorized('no token provided')
     const [bearer, token] = req.headers.authorization.split(' ')
@@ -16,7 +15,6 @@ const authenticateUser = async (req, res, next) => {
         throw new Unauthorized('Not authorized')
       }
       req.user = user
-      // console.log('!!!! User found, view *req.user*', req.user)
       next()
     } catch (err) {
       throw new Unauthorized(err.message)
